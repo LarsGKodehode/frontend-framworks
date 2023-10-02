@@ -2,9 +2,18 @@
 
 ## Content
 
+- [Prerequisites](#prerequisites)
 - [Setting up a new project](#setting-up-a-new-project)
 - [Examples](#examples)
 - [Links](#links)
+
+## Prerequisites
+
+1. [NodeJS](https://nodejs.org/en) Installed
+    Check by typing `node --version` in your terminal. You need a version greater than 16 to use ViteJS
+    See [here](https://nodejs.dev/en/about/releases/) for NodeJS release schedule
+2. [NPM](https://docs.npmjs.com/) We will also make use of the Node package manager NPM. It comes bundled
+    with Node, so nothing to install seperatly
 
 ## Setting up a new project
 1. Creates a new project using the latest version of Vite in a new folder:
