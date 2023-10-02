@@ -1,11 +1,20 @@
+/* Overrides */
+
+body {
+  margin: 0px;
+}
+
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* Typograpy */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,56 +23,72 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Colors */
+:root {
+  --color-primary: rgb(70, 38, 85);
+  --color-secondary: rgb(255, 241, 215);
 }
 
-body {
-  margin: 0;
+.fg-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.fg-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Utilities */
+.flex {
   display: flex;
-  place-items: center;
-  min-width: 320px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+/* Spacing */
+:root {
+  --spacing-base: 2px;
+}
+
+.max-w-lg {
+  max-width: calc(var(--spacing-base) * 400);
+}
+
+.p-sm {
+  padding: calc(var(--spacing-base) * 2);
+}
+
+.p-md {
+  padding: calc(var(--spacing-base) * 4);
+}
+
+.p-lg {
+  padding: calc(var(--spacing-base) * 8);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.min-h-screen {
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  min-height: 100svh;
 }
