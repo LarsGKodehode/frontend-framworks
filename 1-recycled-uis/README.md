@@ -1,12 +1,12 @@
 # Recycled UIs
 
 ## Content
-- [Cheat Sheet](#cheat-sheet)
+
+- [Setting up a new project](#setting-up-a-new-project)
+- [Examples](#examples)
 - [Links](#links)
 
-## Cheat Sheet
-
-### Setting up a new project
+## Setting up a new project
 1. Creates a new project using the latest version of Vite in a new folder:
 ```sh
 npm create vite@latest
@@ -22,10 +22,26 @@ npm install
 npm run dev
 ```
 
+## Examples
 
+### Basic Component
+
+The simplest React Component
+[Code](src/components/Logo/)
+
+### Component Variations
+
+How to create components with variations
+[Code](src/components/Social/)
+
+### Container Components
+
+How to setup container components
+[Code](src/components/LayoutBase/)
 
 ## Links
 
 - [NPM Repository](https://www.npmjs.com/)
 - [Vite Docs](https://vitejs.dev/)
 - [React Docs](https://react.dev/)
+- [Netlify](https://netlify.com/)
