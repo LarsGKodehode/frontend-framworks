@@ -1,8 +1,31 @@
-# React + Vite
+# Recycled UIs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Content
+- [Cheat Sheet](#cheat-sheet)
+- [Links](#links)
 
-Currently, two official plugins are available:
+## Cheat Sheet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Setting up a new project
+1. Creates a new project using the latest version of Vite in a new folder:
+```sh
+npm create vite@latest
+```
+
+2. When starting a new project, remember to download all the dependencies described by the `package.json`:
+```sh
+npm install
+```
+
+3. Once everything is installed, you can boot up the development server:
+```sh
+npm run dev
+```
+
+
+
+## Links
+
+- [NPM Repository](https://www.npmjs.com/)
+- [Vite Docs](https://vitejs.dev/)
+- [React Docs](https://react.dev/)
