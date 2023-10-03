@@ -6,6 +6,7 @@
 - [Setting up a new project](#setting-up-a-new-project)
 - [Examples](#examples)
 - [Links](#links)
+- [Extras](#extras--not-covered-in-class)
 
 ## Prerequisites
 
@@ -48,9 +49,22 @@ How to create components with variations
 How to setup container components
 [Code](src/components/LayoutBase/)
 
+### Rendering Lists
+
+How to render lists of data
+[Code](src/components/ArticleFeed/)
+
 ## Links
 
 - [NPM Repository](https://www.npmjs.com/)
 - [Vite Docs](https://vitejs.dev/)
 - [React Docs](https://react.dev/)
 - [Netlify](https://netlify.com/)
+
+## Extras<br>*- Not covered in class*
+
+### Environment Variables
+
+Sometimes we have a set of values that are used throughout our project and we want to lift them up, so we only have a single place to edit them and then propogate out to where they are used. This is something Environment Variables can be used for. These are variables that normally are set in the Operating Systems and are available to every application running on one machine. We are not going to use exactly those, but a derivative through an `.env` file. This file will get loaded by ViteJS and any variables whitin will be available inside every source file through a object `import.meta.env.<NAME_OF_ENV_VARAIBLE>`, one can also use it inside `index.html` with a special syntax `%<NAME_OF_ENV_VARIABLE>%`.
+
+[ViteJS Environment Variables](https://vitejs.dev/guide/env-and-mode.html).
