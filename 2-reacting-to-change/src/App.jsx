@@ -1,4 +1,3 @@
-import { ArticleFeed } from './components/ArticleFeed/ArticleFeed'
 import { capitalize } from './utilities/capitalize'
 
 function App() {
@@ -9,10 +8,7 @@ function App() {
       </header>
 
       <main className='grow mx-auto'>
-        <section>
-          <h2>Articles List</h2>
-          <ArticleFeed />
-        </section>
+
       </main>
 
       <footer>

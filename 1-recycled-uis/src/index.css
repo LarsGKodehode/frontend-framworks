@@ -3,6 +3,12 @@ body {
   margin: 0px;
 }
 
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
 /* Typography and colors */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -14,6 +20,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Colors */
+:root {
+  --color-primary: rgb(70, 38, 85);
+  --color-secondary: rgb(255, 241, 215);
+}
+
+.fg-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.fg-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
 
 /* Utilities */
@@ -154,11 +182,15 @@ body {
   gap: calc(var(--spacing-base) * 4);
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.max-w-lg {
+  max-width: calc(var(--spacing-base) * 400);
 }

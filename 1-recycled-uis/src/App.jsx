@@ -1,10 +1,13 @@
 import { LayoutBase } from './components/LayoutBase/LayoutBase'
+import { ArticleFeed } from './components/ArticleFeed/ArticleFeed'
 
 function App() {
   return (
     <LayoutBase>
-      <h2>Hello Friends</h2>
-
+      <section>
+        <h2>Articles List</h2>
+        <ArticleFeed />
+      </section>
 
     </LayoutBase>
   )
