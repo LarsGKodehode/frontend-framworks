@@ -83,6 +83,18 @@ ul, ol {
   padding: calc(var(--spacing-base) * 8);
 }
 
+.px-sm {
+  padding: calc(var(--spacing-base) * 2);
+}
+
+.px-md {
+  padding: calc(var(--spacing-base) * 4);
+}
+
+.px-lg {
+  padding: calc(var(--spacing-base) * 8);
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
