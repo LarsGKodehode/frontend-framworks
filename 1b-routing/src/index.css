@@ -3,7 +3,6 @@
 /* Removes default document border */
 body {
   margin: 0px;
-  height: 100vh;
 }
 
 /* Individually style lists */
