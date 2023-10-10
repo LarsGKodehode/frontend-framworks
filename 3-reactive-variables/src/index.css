@@ -348,6 +348,10 @@ img {
   min-height: 100vh;
 }
 
+.h-content {
+  height: fit-content;
+}
+
 .max-w-sm {
   max-width: calc(var(--spacing-base) * 100);
 }
@@ -362,6 +366,23 @@ img {
 
 .w-full  {
   width: 100%;
+}
+
+/* Placement */
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-0 {
+  top: calc(var(--spacing-base) * 0);
+}
+
+.top-64 {
+  top: calc(var(--spacing-base) * 64);
 }
 
 /* Shapes */
