@@ -2,6 +2,7 @@ import { Outlet, Link, NavLink } from 'react-router-dom'
 import { capitalize } from '../utilities/capitalize'
 import { Logo } from '../components/Logo/Logo'
 import { Social } from '../components/Social/Social'
+import { Counter } from '../components/Counter/Counter'
 
 export function LayoutBase() {
   return (
@@ -27,8 +28,20 @@ export function LayoutBase() {
         </nav>
       </header>
 
-      <div className='grow flex flex-col py-4'>
-        <Outlet />
+      <div className='flex'>
+        <div className='grow flex flex-col py-4'>
+          <Outlet />
+        </div>
+
+        <aside className='flex flex-col px-16 gap-4 sticky top-64 py-8 h-content'>
+          <Counter />
+          <Counter />
+          <Counter />
+          <Counter />
+          <Counter />
+          <Counter />
+          <Counter />
+        </aside>
       </div>
 
       <footer className='py-8 bg-primary fg-secondary'>
