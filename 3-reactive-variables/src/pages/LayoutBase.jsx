@@ -31,13 +31,13 @@ export function LayoutBase() {
         <Outlet />
       </div>
 
-      <footer className='py-4 bg-primary fg-secondary'>
-        <p className='text-center'>Kodehode</p>
-        <div className='flex gap-4 justify-center'>
+      <footer className='py-8 bg-primary fg-secondary'>
+        <div className='flex gap-16 justify-center'>
           <Social platform="twitter" userName="twittewr" />
           <Social platform="github" userName="github" />
           <Social platform="linkedin" userName="linkedin" />
         </div>
+        <p className='text-center'>Kodehode</p>
       </footer>
     </div>
   )
