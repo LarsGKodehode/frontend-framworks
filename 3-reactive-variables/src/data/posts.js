@@ -2,12 +2,6 @@ import { faker } from '@faker-js/faker'
 import exampleImage from '../assets/post-example.webp'
 
 /**
- * Ensures the generator is stable for a given
- * program
- */
-faker.seed(randomInt(1, 100000))
-
-/**
  * @typedef {{
  * id: string,
  * author: string,
@@ -18,11 +12,14 @@ faker.seed(randomInt(1, 100000))
  * }} Post
  */
 
+/** instance seed */
+const SEED = randomInt(1, 2**32)
+
 /**
  * Returns an array of the latest posts
  */
 export function getPosts(amount = 10) {
-  return Array(amount).fill("").map(() => createPost())
+  return Array(amount).fill("").map((_, index) => createPost(SEED + index))
 }
 
 /**
@@ -30,21 +27,21 @@ export function getPosts(amount = 10) {
  * @returns {Post}
  */
 export function getPost(postId) {
-  const post = createPost()
-  post.id = postId
-  return post
+  return createPost(postId)
 }
 
 /**
  * @returns {Post}
  */
-function createPost() {
+function createPost(postId) {
   return {
-    id: faker.string.uuid(),
+    id: postId,
     author: faker.internet.userName(),
     image: exampleImage,
-    title: faker.lorem.words(randomInt(3, 4)),
-    paragraphs: Array(randomInt(1, 4)).fill("").map(() => faker.lorem.paragraph(randomInt(3, 6))),
+    title: faker.lorem.words(faker.number.int({min: 2, max: 5})),
+    paragraphs: Array(faker.number.int({min: 2, max: 5}))
+      .fill("")
+      .map(() => faker.lorem.paragraph(faker.number.int({min: 3, max: 5}))),
     createdAt: faker.date.anytime()
   }
 }
