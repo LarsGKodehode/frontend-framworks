@@ -7,7 +7,7 @@ export function LayoutBase() {
   return (
     <div className='flex flex-col min-h-screen'>
       <header className='flex justify-around items-center px-8 py-4 bg-primary fg-secondary'>
-        <Link href='./' className='w-32'>
+        <Link to='/' className='w-32'>
           <Logo />
         </Link>
 
