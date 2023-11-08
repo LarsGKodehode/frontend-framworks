@@ -141,3 +141,40 @@ In this quick guide, we'll cover some fundamental aspects of TypeScript. TypeScr
    ```
 
    Notice how TypeScript infers the types for fullName and newAge variables, while we still would get type errors if we tried to give our typed function arguments of the wrong type.
+
+## Typing Objects and Arrays
+
+Let's see how we can type arrays and objects to ensure we consistency and structure within our application.
+
+1. **Typing Objects:**
+
+   Define an object with specified types for its properties:
+
+   ```ts
+   type User = {
+     name: string;
+     age: number;
+     isAdmin: boolean;
+   };
+
+   const user: User = {
+     name: "Alice",
+     age: 30,
+     isAdmin: false,
+   };
+   ```
+
+   There are two things to note here.
+   One, your IDE knows which fields are part of the object and helps you with autocompletion hints when writing the fields.
+   Two, you get errors when the type of the field does not match the type you have specified.
+
+2. **Typing Arrays:**
+
+   Create an array with a specific data type:
+
+   ```ts
+   const numbers: number[] = [1, 2, 3, 4, 5];
+   const names: string[] = ["Alice", "Bob", "Charlie"];
+   ```
+
+   Experiment with appending elements of different types to these arrays and observe how TypeScript ensures type conformity.
