@@ -1,8 +1,7 @@
 /**
- * Capitalizes a s string, not local aware
+ * Capitalizes a string
  * 
  * @param {string} str - String to capitalize
- * @returns 
  */
 export function capitalize(str) {
   const capitalized = str
