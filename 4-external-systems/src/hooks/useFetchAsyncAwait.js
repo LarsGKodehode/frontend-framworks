@@ -2,22 +2,20 @@ import { useEffect, useState } from "react"
 
 /**
  * Async await variant
+ * Largely functional identical to the promise chaining
+ * The main difference here is the way we write
+ * our error handling.
  */
 
 /**
  * This is a custom hook for fetching data
- * 
- * More generically this is what's called an abstraction,
- * we have abstraced (hidden) away all the logic for performing
- * the fetch request and only exposed the parts we are actually
- * interested in (along with the required parts, the URL in this case)
  * 
  * @param {string} url
  */
 export function useFetchAsyncAwait(url) {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
-  
+
   useEffect(
     () => fetchData(url, setData, setError),
     [url]
@@ -34,8 +32,8 @@ export function useFetchAsyncAwait(url) {
  * Wrapper around fetch
  * 
  * @param {string} url 
- * @param {() => void} onSuccess 
- * @param {() => void} onError 
+ * @param {(responseData: any) => void} onSuccess 
+ * @param {(error: any) => void} onError 
  */
 async function fetchData(url, onSuccess, onError) {
   try {
