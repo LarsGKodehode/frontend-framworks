@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function TypeSafeDataFetcher<ApiResponse>(url: RequestInfo | URL, init?: RequestInit) {
+export default function useFetch<ApiResponse>(url: RequestInfo | URL, init?: RequestInit) {
   // Reactive Values
   const [data, setData] = useState<null | ApiResponse>(null)
   const [error, setError] = useState<null | string>(null)
