@@ -1,27 +1,58 @@
-# React + TypeScript + Vite
+# Handling External Types with TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Handling API response in TypeScript can be a bit overwhelming when first starting with TypeScript
 
-Currently, two official plugins are available:
+## Loosen the TypeScript Type tightness
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Disable Type checking
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Disabling typechecking in the build step might be resonable in some cases, though you should be aware that you are now depending on your own eyes to catch and fix all potential errors in your code.
 
-- Configure the top-level `parserOptions` property like this:
+It is done by simply removing the **tsc** step from the build pipeline.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+This
+```json
+   "build": "tsc && vite build",
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+becomes this
+```json
+   "build": "vite build",
+```
+
+<details>
+<summary>Full File</summary>
+
+```json
+{
+  "name": "4ts-external-systems",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
+```
+</details>
+
