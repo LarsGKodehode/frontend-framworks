@@ -21,7 +21,7 @@ async function getFavoriteNumber(): Promise<number> {
 
 // It is also quite handy when it comes to Typing the response from APIs
 // Most of the time these types are created by those developing the backend system
-// and made available through a package (SDK)
+// and made available through a package, Software Development Kit (SDK), or some other means.
 // But for simple usecases we can define these by hand
 type User = {
   id: number
