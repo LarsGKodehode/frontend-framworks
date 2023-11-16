@@ -6,7 +6,9 @@ import { useEffect, useState } from "react"
  * 
  * @param url - The URL we want to send a GET request to
  */
-export default function useFetchBasic(url: string | URL) {
+export default function useFetchBasic(url: string) {
+  // Disabling the strict no-explicit-any check on the line bellow
+  // eslint-disable-next-line
   const [data, setData] = useState<null | any>(null)
 
   const isLoading = !data
