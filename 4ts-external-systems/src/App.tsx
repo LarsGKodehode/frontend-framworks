@@ -1,3 +1,5 @@
+import { ExampleUseEffect } from "./components/UseEffect/ExampleUseEffect"
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -9,6 +11,11 @@ function App() {
         <section>
           <h2>Fetching Data</h2>
           
+        </section>
+
+        <section>
+          <h2>Use Effect</h2>
+          <ExampleUseEffect />
         </section>
       </main>
 
