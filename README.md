@@ -8,6 +8,7 @@
   2. [Multiple Pages](#multiple-pages)
   3. [Reacting to changing variables](#reacting-to-changing-variables)
   4. [Synchronizing with external systems](#synchronizing-with-external-systems)
+  5. [TypeScript Intro](#typescript-intro)
 
 ## About
 
@@ -34,3 +35,10 @@ Showcases how to setup componenets in React that react to changing variables. Th
 #### [Project](./4-external-systems/)
 
 Often times we need to use variables that are stored outside our React applications. This is sligthly complicated, but this project showcases the most common usage by requesting data from a server and updating a component depending on the status of that request, *in progress*, *completed* and *oh noes, an error happend*.
+
+### TypeScript Intro
+#### [Project](./typescript-intro/)
+
+A basic introduction to types and TypeScript. Have a look at the readme and go through the examples. If you want more extensive documentation see the official [TypeScript] homepage.
+
+[TypeScript]: https://www.typescriptlang.org/
